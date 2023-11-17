@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthdate calculator</title>
+    <link rel="stylesheet" href="../stylesheet/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrap">
+            <h1>Birthdate calculator</h1>
+
+            <form action="/result" method="post" enctype="multipart/form-data">
+
+                <lable for="name">Name: </lable>
+                <input type="text" id="name" name="name"class="form-control" required placeholder="Name">
+
+                <lable for="email">Email: </lable>
+                <input type="text" id="email" name="email"class="form-control" required placeholder="Email Address">
+
+                <lable for="day">Date of Birth: </lable>
+                <input type="date" id="date" name="date" required pattern="\d{2}/\d{2}/\d{4} ">
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
