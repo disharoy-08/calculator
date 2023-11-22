@@ -1,0 +1,58 @@
+.container{
+    margin: 90px;
+}
+#search-bar i,button {
+    position: absolute;
+}
+ 
+#search-bar {
+    margin-bottom: 10px;
+}
+ 
+.icon {
+    padding: 4px; 
+    margin-top: 10px;
+    color: rgb(114, 116, 114);
+    min-width: 40px;
+    text-align: center;
+    
+}
+#inputField{
+  background-position: 10px 12px; 
+  background-repeat: no-repeat; 
+  width: 95%;
+  font-size: 18px;
+  padding: 12px 20px 12px 40px; 
+  border: 2px solid rgb(83, 71, 71); 
+  border-radius: 5px;
+  margin-bottom: 12px; 
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    /* margin: 40px; */
+}
+th, td{
+    padding: 15px;
+}
+
+th{
+    background-color: rgb(188, 182, 182);
+    width:10%;
+    /*height: 50px; */
+    font-size: 20px;
+}
+
+#btn{
+    padding: 8px 18px;
+    background-color: rgb(207, 202, 202);
+    color: #090909;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    width: 90px;
+}
+.arrow{
+    display: inline;
+}

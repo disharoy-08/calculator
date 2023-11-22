@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+    <title>Result</title>
+    <link rel="stylesheet" href="/stylesheet/result.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src= 
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> 
+    </script> 
+</head>
+
+<body>
+    <h1>View all datas here</h1>
+
+    <div class="container">
+
+        <div id="search-bar">
+            <form action="/result" method="get" enctype="multipart/form-data" >
+            <i class="fa fa-search icon" aria-hidden="true"></i>
+            <input type="text" name="search" id="inputField" placeholder="Search for data">
+            <button class="icon" id="btn" type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="table-content">
+            <table class="table" id="table_data">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Roll Number</th>
+                        <th>Stream</th>
+                        <th>Email</th>
+                        <th>Date of Birth</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody-data">
+                    <% if(alldata?.length){ alldata.forEach((e)=>{
+
+                        %>
+                        <tr>
+                            <td>
+                                <%=e.firstname%>
+                            </td>
+                            <td>
+                                <%= e.lastname %>
+                            </td>
+                            <td>fdfd<%= e.email %>fd</td>
+                            <td>
+                                <%= e.roll %>
+                            </td>
+                            <td>
+                                <%= e.stream %>
+                            </td>
+                            <td>
+                                <%= e.date %>
+                            </td>
+
+                        </tr>
+                        <% }) %>
+                            <% }%>
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            <div class="arrow">
+                <button class="icon" id="leftBtn ">prev</button>
+                <button class="icon" id="rightBtn ">next</button>
+                <button class="icon" id="count">10</button>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <!-- <script>
+        $(document).ready(function () {
+            load_data();
+
+            function load_data() {
+                $.ajax({
+                    url: "http://localhost:8080/result",
+                    method: "GET",
+                    data: { action: 'fetch' },
+                    dataType: "JSON",
+                    success: function (data) {
+                        const html = '';
+
+                        if (data.data.length > 0) {
+                            for (let count = 0; count < data.data.length; count++) {
+                                html += `
+                                <tr>
+                                    <td>` + data.data[count].fname`</td>
+                                    <td>`+ data.data[count].lname`</td>
+                                    <td>`+ data.data[count].roll`</td>
+                                    <td>`+ data.data[count].stream`</td>
+                                    <td>`+ data.data[count].email`</td>
+                                    <td>`+ data.data[count].date`</td>
+                                </tr>
+                                `;
+                            }
+                        }
+                        $('#table_data').html(html)
+                    }
+
+                })
+            }
+        })
+    </script> -->
+
+    <!-- <script>
+        function filterData(){
+            var input,filter, table, tr, td, i,j, txtval;
+
+            input= document.getElementById("inputField");
+            filter = input.value.toUpperCase();
+            table = document.getElementById(" tbody-data");
+            tr = table.getElementsByTagName("tr");
+
+            for(i=0; i<tr.length; i++){
+                td = tr[i].getElementByTagName("td")[0];
+                if(td){
+                    txtval = td.textContent || td.innerText;
+                    if (txtval.toUpperCase().indexOf(filter)> -1){
+                        tr[i].style.display= "";
+                    }else{
+                        tr[i].style.display= "none";
+                    }
+                }
+            }
+        }
+    </script> -->
+    <!-- <script>
+        $(document).ready(function(){
+            $('#inputField').on("keyup", function(){
+                let value = $(this).val().toLowerCase();
+                $("#tbody-data tr").filter(function(){
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value)> -1)
+                });
+            });
+        });
+    </script> -->
+
+    <script>
+
+    </script>
+</body>
+
+</html>

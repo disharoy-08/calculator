@@ -4,29 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthdate calculator</title>
-    <link rel="stylesheet" href="../stylesheet/style.css">
+    <title>Student details</title>
+    <link rel="stylesheet" href="/stylesheet/style.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="wrap">
-            <h1>Birthdate calculator</h1>
+        <h1> Student Details</h1>
 
-            <form action="/result" method="post" enctype="multipart/form-data">
+        <form action="/data-save" method="post" enctype="multipart/form-data">
+            <lable for="firstname">First Name: </lable>
+            <input type="text" id="firstname" name="firstname" class="form-control" required placeholder="First Name">
 
-                <lable for="name">Name: </lable>
-                <input type="text" id="name" name="name"class="form-control" required placeholder="Name">
+            <lable for="lastname">Last Name: </lable>
+            <input type="text" id="lastname" name="lastname" class="form-control" required placeholder="Last Name">
 
-                <lable for="email">Email: </lable>
-                <input type="text" id="email" name="email"class="form-control" required placeholder="Email Address">
+            <lable for="roll">Roll Number: </lable>
+            <input type="text" id="roll" name="Roll" class="form-control" required placeholder="Roll">
 
-                <lable for="day">Date of Birth: </lable>
-                <input type="date" id="date" name="date" required pattern="\d{2}/\d{2}/\d{4} ">
+            <lable for="Stream">Stream : </lable>
+            <input type="text" id="Stream" name="Stream" class="form-control" required placeholder="Stream">
 
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+
+            <lable for="email">Email: </lable>
+            <input type="text" id="email" name="email" class="form-control" required placeholder="Email Address">
+
+
+            <lable for="day">Date of Birth: </lable>
+            <input type="date" id="date" name="date" class="form-control" required pattern="\d{2}/\d{2}/\d{4} ">
+
+
+            <button id="btn" type="submit">Submit</button>
+
+        </form>
     </div>
 </body>
 

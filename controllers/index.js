@@ -1,4 +1,7 @@
 module.exports = {
     HomeController:require("./home"),
-    resultController: require("./calulator")
+    resultController: require("./calculator"),
+    dataController: require("./datasave"),
+    viewController: require('./result')
+    
 }
